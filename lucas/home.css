@@ -1,0 +1,27 @@
+/*Corpo*/
+body 
+{
+      font-family: Arial, sans-serif;
+      background-image: url("capa.jpeg");
+      background-repeat: no-repeat;
+      margin: 0%;
+      background-size: cover;
+}
+
+
+
+.butao
+{
+  background-color: wheat; 
+  width: 150px;
+  height: 80px;
+  font-size: 18px;
+  text-align: center;
+  line-height:  80px;
+  border-radius: 8px;
+  display: inline-block;
+  text-decoration: none;
+  color:black;
+
+}
+

@@ -1,0 +1,33 @@
+body {
+            font-family: Arial, sans-serif;
+			margin:0;
+            background-image:url(fundo.jpeg);
+				
+			background-repeat: no-repeat;
+			background-size : auto;
+			background-position: center 50px;
+		
+        }
+
+        /* Estilo da barra de menu */
+        .menu {
+            background-color: #333;
+				
+        }
+
+        /* Estilo dos links no menu */
+        .menu a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        /* Estilo ao passar o mouse sobre os links */
+        .menu a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+        .conteudo{
+            color:white;
+        }

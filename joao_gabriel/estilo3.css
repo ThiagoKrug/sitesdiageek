@@ -1,0 +1,55 @@
+ body {
+            font-family: Arial, sans-serif;;
+            text-align: center;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0px;
+        }
+
+        /* Estilo da barra de menu */
+        .menu {
+            background-color: #333333;
+        }
+
+        /* Estilo dos links no menu */
+        .menu a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        /* Estilo ao passar o mouse sobre os links */
+        .menu a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        body {
+            background-color: rgb(224, 212, 212);
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+    .image-container {
+      display: inline-block; /* Permite que o contêiner seja tratado como um bloco em linha */
+    }
+    img {
+      display: inline-block; /* Garante que cada imagem seja tratada como um elemento em linha */
+      height: auto; /* Mantém a proporção da imagem */
+      margin: 40px; /* Espaçamento entre as imagens */
+      border: 2px solid #ccc; /* Opcional: borda */
+      border-radius: 8px; /* Opcional: bordas arredondadas */
+    }
+
+    .intro
+    {
+        font-weight: bold;
+    }
+
+
+
+
+  

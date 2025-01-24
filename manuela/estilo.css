@@ -1,0 +1,30 @@
+
+        body {
+            font-family: times new roman, serif;
+			background-image: url("katniss.jpg");;
+			font-weight: 400
+			
+        }
+
+        /* Estilo da barra de menu */
+        .menu {
+          
+        }
+
+        /* Estilo dos links no menu */
+        .menu a {
+            color: #FF0000;
+            padding: 14px 20px;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        /* Estilo ao passar o mouse sobre os links */
+        .menu a:hover {
+            background-color: black;
+            color: red;
+			/* Estilo de texto*/
+			p {
+				text-align: left
+				
+        }

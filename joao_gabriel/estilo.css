@@ -1,0 +1,75 @@
+﻿ body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            line-height: 1.6;
+            margin: 0px;
+        }
+
+        h1 {
+            font-family: 'Roboto', sans-serif; /* Fonte personalizada */
+            font-size: 35px;
+        }
+        
+
+        /* Estilo da barra de menu */
+        .menu {
+            background-color: #333333;
+        }
+    
+        body {
+            color: rgb(214, 203, 203); /* Muda a cor do texto para branco */
+        }
+        h2 {font-size: 25px;}
+    
+        
+        .quadrado-destaque {
+            padding: 10px; /* Espaço entre o texto e a borda */
+            border: 2px solid black; /* Borda preta ao redor do texto */
+            background-color: rgba(173, 126, 104, 0.3); /* Fundo branco translúcido (30% opaco) */
+            color: rgb(219, 219, 219); /* Cor do texto */
+            display: inline-block; /* Para garantir que o quadrado se ajuste ao tamanho do texto */
+            border-radius: 5px; /* Bordas arredondadas (opcional) */
+            max-width: 3000px; /* Limita a largura máxima do quadrado */
+            width: 90%; /* Define a largura como uma porcentagem do elemento pai (ajusta conforme necessário) */
+            text-align: center; /* Garante que o texto se alinhe ao centro */
+        }
+        
+
+        /* Estilo dos links no menu */
+        .menu a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        /* Estilo ao passar o mouse sobre os links */
+        .menu a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        body {
+            background-color: rgb(224, 212, 212);
+        }
+
+        p {
+            margin-top: 30px;     /* Espaço no topo */
+            margin-right: 50px;   /* Espaço à direita */
+            margin-bottom: 30px;  /* Espaço na parte inferior */
+            margin-left: 50px;    /* Espaço à esquerda */
+        }
+        
+           
+        .image-container img {
+            border: 2px solid #000; /* Cor e espessura da borda */
+            border-radius: 5px; /* Bordas arredondadas, opcional */
+            width: 550px; /* Largura de cada imagem */
+            height: auto; /* Preserva a proporção da imagem */
+        }
+
+
+        
+
+
+  

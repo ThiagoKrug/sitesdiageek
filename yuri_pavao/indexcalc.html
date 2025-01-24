@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="PT-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Científica</title>
+    <link rel="stylesheet" href="assets/style2.css">
+    <script>
+        let canvas, ctx;
+        let x = 30, y = 30;
+        const WIDTH = 150, HEIGHT = 140;
+        const tile1 = new Image();
+        let posicao = 0;
+        const NUM_POSICOES = 12;
+        let animacaoAtiva = false;
+        let intervaloAnimacao;
+        let currentInput = "";
+
+        function back(){
+            window.location.href = "index.html";
+        }
+        
+        function Iniciar() {
+            canvas = document.getElementById("canvas");
+            if (!canvas) {
+                console.error("Elemento canvas não encontrado!");
+                return;
+            }
+            ctx = canvas.getContext("2d");
+            if (!ctx) {
+                console.error("Contexto 2D não suportado pelo navegador!");
+                return;
+            }
+            Atualizar();
+        }
+        
+        function LimparTela() {
+            ctx.fillStyle = "rgb(48, 48, 48)";
+            ctx.fillRect(0, 0, WIDTH, HEIGHT);
+        }
+        
+        function Atualizar() {
+            LimparTela();
+            Desenhar();
+        }
+        
+        function Desenhar() {
+            tile1.src = `assets/images/${posicao}.png`;
+            tile1.onload = () => {
+                const imgWidth = tile1.width;
+                const imgHeight = tile1.height;
+                const scale = Math.min(WIDTH / imgWidth, HEIGHT / imgHeight);
+                const scaledWidth = imgWidth * scale;
+                const scaledHeight = imgHeight * scale;
+                const offsetX = (WIDTH - scaledWidth) / 2;
+                const offsetY = (HEIGHT - scaledHeight) / 2;
+        
+                ctx.drawImage(tile1, offsetX, offsetY, scaledWidth, scaledHeight);
+            };
+        }
+        
+        function executarAnimacao(inicio, fim) {
+            if (animacaoAtiva) return;
+            animacaoAtiva = true;
+            posicao = inicio;
+        
+            intervaloAnimacao = setInterval(() => {
+                posicao++;
+                if (posicao > fim) {
+                    clearInterval(intervaloAnimacao);
+                    animacaoAtiva = false;
+                } else {
+                    Atualizar();
+                }
+            }, 100);
+        }
+        
+        function performCalculation(calculationFunc, animacaoRange) {
+            try {
+                const value = parseFloat(currentInput);
+                if (isNaN(value)) throw new Error("Valor inválido");
+                const result = calculationFunc(value);
+                if (result === undefined || isNaN(result)) throw new Error("Erro no cálculo");
+                currentInput = result.toString();
+                document.getElementById("display").value = currentInput;
+                executarAnimacao(animacaoRange[0], animacaoRange[1]);
+            } catch {
+                document.getElementById("display").value = "Erro";
+                currentInput = "";
+                executarAnimacao(30, 39); 
+            }
+        }
+        
+        function calculateSquareRoot() {
+            performCalculation(value => {
+                if (value < 0) throw new Error("Raiz quadrada inválida");
+                return Math.sqrt(value);
+            }, [7, 11]);
+        }
+        
+        function calculateRadication() {
+            performCalculation(value => Math.cbrt(value), [7, 11]);
+        }
+        
+        function calculateFactorial() {
+            try {
+                const num = parseInt(currentInput);
+                if (isNaN(num) || num < 0 || !Number.isInteger(num)) {
+                    throw new Error("Fatorial inválido");
+                }
+                let result = 1;
+                for (let i = 2; i <= num; i++) {
+                    result *= i;
+                }
+                currentInput = result.toString();
+                document.getElementById("display").value = currentInput;
+                executarAnimacao(12, 19);
+            } catch {
+                document.getElementById("display").value = "Erro";
+                currentInput = "";
+                executarAnimacao(30, 39); 
+            }
+        }
+        
+        function calculateSine() {
+            performCalculation(value => Math.sin((value * Math.PI) / 180), [20, 29]);
+        }
+        
+        function calculateCosine() {
+            performCalculation(value => Math.cos((value * Math.PI) / 180), [12, 19]);
+        }
+        
+        function calculateTangent() {
+            performCalculation(value => {
+                if (Math.cos((value * Math.PI) / 180) === 0) {
+                    throw new Error("Tangente indefinida");
+                }
+                return Math.tan((value * Math.PI) / 180);
+            }, [20, 29]);
+        }
+        
+        function clearDisplay() {
+            currentInput = "";
+            document.getElementById("display").value = "";
+            posicao = 0;
+            Atualizar();
+        }
+        
+        function appendToDisplay(value) {
+            currentInput += value;
+            document.getElementById("display").value = currentInput;
+            executarAnimacao(0, 6);
+        }
+        
+        function calculateResult() {
+            try {
+                const sanitizedInput = currentInput.replace(/[^0-9+\-*/(). ]/g, "");
+                const result = eval(sanitizedInput);
+                if (result === undefined || isNaN(result)) throw new Error("Erro no cálculo");
+                currentInput = result.toString();
+                document.getElementById("display").value = currentInput;
+                executarAnimacao(20, 29);
+            } catch {
+                document.getElementById("display").value = "Erro";
+                currentInput = "";
+                executarAnimacao(30, 39); 
+            }
+        }
+        window.onload = Iniciar;
+    </script>
+</head>
+<body>
+    <div class="scientificcalculatorT">
+        <input type="text" id="display" readonly placeholder="0">
+        <div class="buttons">
+            <button onclick="appendToDisplay('0')">0</button>
+            <button onclick="appendToDisplay('1')">1</button>
+            <button onclick="appendToDisplay('2')">2</button>
+            <button onclick="appendToDisplay('3')">3</button>
+            <button onclick="appendToDisplay('4')">4</button>
+            <button onclick="appendToDisplay('5')">5</button>
+            <button onclick="appendToDisplay('6')">6</button>
+            <button onclick="appendToDisplay('7')">7</button>
+            <button onclick="appendToDisplay('8')">8</button>
+            <button onclick="appendToDisplay('9')">9</button>
+            <button onclick="appendToDisplay('+')">+</button>
+            <button onclick="appendToDisplay('-')">-</button>
+            <button onclick="appendToDisplay('*')">x</button>
+            <button onclick="appendToDisplay('/')">÷</button>
+            <button onclick="appendToDisplay('.')">.</button>
+            <button onclick="appendToDisplay('**')">^</button>
+            <button onclick="calculateSquareRoot()">√</button>
+            <button onclick="calculateRadication()">∛</button>
+            <button onclick="calculateFactorial()">n!</button>
+            <button onclick="calculateSine()">sin</button>
+            <button onclick="calculateCosine()">cos</button>
+            <button onclick="calculateTangent()">tan</button>
+            <button onclick="clearDisplay()">C</button>
+            <button class="equal" onclick="calculateResult()">=</button>
+            <button class="back" onclick="back()">Voltar</button>
+        </div>
+        <canvas id="canvas" width="150" height="140"></canvas>
+    </div>
+</body>
+</html>

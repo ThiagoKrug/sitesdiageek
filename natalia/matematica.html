@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Simples</title>
+    <link rel="stylesheet" type="text/css" href="estilo2.css">
+    <script>
+        // Função para gerar a tabuada
+        function gerarTabuada() {
+            var numero = document.getElementById('numero').value;
+            var tabela = document.getElementById('tabuada');
+
+            // Limpa a tabela antes de gerar nova
+            tabela.innerHTML = '';
+
+            if (numero === "" || numero <= 0) {
+                alert("Por favor, insira um número válido.");
+                return;
+            }
+
+            // Gera a tabuada de 1 a 10
+            for (var i = 1; i <= 10; i++) {
+                var linha = tabela.insertRow();
+                var celulaMultiplicacao = linha.insertCell(0);
+                var celulaResultado = linha.insertCell(1);
+
+                celulaMultiplicacao.textContent = numero + " x " + i;
+                celulaResultado.textContent = numero * i;
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <div class="menu">
+        <a href="personagem.html">Personagem</a>
+        <a href="ingles2.html">Versão em inglês</a>
+        <a href="matematica.html">Matemática</a>
+        <a href="educacaofisica.html">Educação Física</a>
+    </div>
+	<div style="background-color: rgba(0,0,0,0.5); width:100%;  height: 100%; position:fixed; z-index: 1000;">
+            
+    </div>
+	 <div class="conteudo" style="position: relative; z-index: 1001;">
+
+    <!-- Overlay (Fundo escuro opcional) -->
+    <div class="overlay"></div>
+
+    <div class="conteudo">
+         <title> Desafios Matemática </title>
+		 <!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>História e Matemática - Ghost</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1a1a1a;
+            color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            padding: 20px;
+            text-align: center;
+        }
+        header h1 {
+            color: #ff4c4c;
+        }
+        section {
+            margin: 20px;
+            padding: 20px;
+            background-color: #222;
+            border-radius: 10px;
+        }
+        section h2 {
+            color: #ff4c4c;
+        }
+        .mini-game {
+            margin-bottom: 30px;
+        }
+        .mini-game input {
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 4px;
+            border: none;
+            width: 80%;
+        }
+        .mini-game button {
+            padding: 10px 20px;
+            background-color: #ff4c4c;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .mini-game button:hover {
+            background-color: #ff6666;
+        }
+        #result {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>História e Matemática - Ghost</h1>
+        <p>Resolva desafios enquanto descobre mais sobre Ghost.</p>
+    </header>
+
+    <section>
+        <div class="mini-game">
+            <h2>1. Formação de Ataque</h2>
+            <p>Ghost precisa formar um triângulo com 15 soldados. Quantos soldados devem ficar em cada lado?</p>
+            <input type="number" id="answer1" placeholder="Digite sua resposta">
+            <button onclick="checkGame1()">Enviar</button>
+            <p id="result1"></p>
+        </div>
+
+        <div class="mini-game">
+            <h2>2. Decodificação Criptográfica</h2>
+            <p>Ghost encontrou uma mensagem com o código: (12 + 8) × 2. Qual é o valor da mensagem decodificada?</p>
+            <input type="number" id="answer2" placeholder="Digite sua resposta">
+            <button onclick="checkGame2()">Enviar</button>
+            <p id="result2"></p>
+        </div>
+
+        <div class="mini-game">
+            <h2>3. Logística de Suprimentos</h2>
+            <p>Uma base militar consome 50kg de suprimentos por dia. Quantos suprimentos são necessários para 10 dias?</p>
+            <input type="number" id="answer3" placeholder="Digite sua resposta">
+            <button onclick="checkGame3()">Enviar</button>
+            <p id="result3"></p>
+        </div>
+
+        <div class="mini-game">
+            <h2>4. Alcance do Tiro</h2>
+            <p>Ghost precisa calcular a trajetória de uma bala. Se a velocidade da bala é 300 m/s e ela atinge o alvo em 2 segundos, qual é a distância?</p>
+            <input type="number" id="answer4" placeholder="Digite sua resposta">
+            <button onclick="checkGame4()">Enviar</button>
+            <p id="result4"></p>
+        </div>
+    </section>
+
+    <script>
+        // Mini-game 1: Formação de Ataque
+        function checkGame1() {
+            const answer1 = document.getElementById('answer1').value;
+            const result1 = document.getElementById('result1');
+            if (answer1 == 5) {
+                result1.textContent = "Correto! Ghost organizou a formação.";
+                result1.style.color = "lightgreen";
+            } else {
+                result1.textContent = "Errado. Tente novamente!";
+                result1.style.color = "red";
+            }
+        }
+
+        // Mini-game 2: Decodificação Criptográfica
+        function checkGame2() {
+            const answer2 = document.getElementById('answer2').value;
+            const result2 = document.getElementById('result2');
+            if (answer2 == 40) {
+                result2.textContent = "Correto! Código decifrado com sucesso.";
+                result2.style.color = "lightgreen";
+            } else {
+                result2.textContent = "Errado. Tente novamente!";
+                result2.style.color = "red";
+            }
+        }
+
+        // Mini-game 3: Logística de Suprimentos
+        function checkGame3() {
+            const answer3 = document.getElementById('answer3').value;
+            const result3 = document.getElementById('result3');
+            if (answer3 == 500) {
+                result3.textContent = "Correto! Suprimentos calculados.";
+                result3.style.color = "lightgreen";
+            } else {
+                result3.textContent = "Errado. Tente novamente!";
+                result3.style.color = "red";
+            }
+        }
+
+        // Mini-game 4: Alcance do Tiro
+        function checkGame4() {
+            const answer4 = document.getElementById('answer4').value;
+            const result4 = document.getElementById('result4');
+            if (answer4 == 600) {
+                result4.textContent = "Correto! Trajetória calculada.";
+                result4.style.color = "lightgreen";
+            } else {
+                result4.textContent = "Errado. Tente novamente!";
+                result4.style.color = "red";
+            }
+        }
+    </script>
+</body>
+</html>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="PT-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linux e Softwares Open Source</title>
+    <style>
+       body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(90deg, #000000, #8B0000);
+    color: #FFD700;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; 
+}
+
+header {
+    background: #1c1c1c;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 4px solid #FFD700;
+    width: 100%; 
+}
+
+h1 {
+    margin: 0;
+    color: #FFD700;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 2.5em;
+    animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+nav {
+    text-align: center;
+    margin: 10px 0;
+    animation: slideIn 1.5s ease-in-out;
+}
+
+@keyframes slideIn {
+    from { transform: translateY(-20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+nav a {
+    color: #FFD700;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 1.2em;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #FF4500;
+}
+
+section {
+    padding: 20px;
+    max-width: 800px;
+    width: 100%;
+    margin: 20px;
+    text-align: center;
+}
+
+.card {
+    background: #1c1c1c;
+    border: 2px solid #FFD700;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px 0;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s, box-shadow 0.3s;
+    animation: cardAnim 1s ease-in-out;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    max-width: 800px;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.7);
+}
+
+.card img {
+    max-width: 100%;
+    border-radius: 10px;
+    animation: zoomIn 1.5s ease-in-out;
+}
+
+@keyframes zoomIn {
+    from { transform: scale(0.8); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+@keyframes cardAnim {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Linux e Softwares Open Source</h1>
+        <nav>
+            <a href="index.html">Voltar</a>
+            <a href="#krita">Krita</a>
+            <a href="#fnf">Friday Night Funkin'</a>
+        </nav>
+    </header>
+    <section class="center" id="sobre">
+        <h2>O que são Softwares Open Source?</h2>
+        <p>Softwares de código aberto (Open Source) são programas cujo código-fonte é disponibilizado ao público. Isso permite que qualquer pessoa veja, modifique e distribua o software de acordo com suas necessidades. Essas ferramentas promovem a colaboração, a inovação e o compartilhamento de conhecimento.</p>
+    </section>
+    <section id="krita" class="card">
+        <h2>Krita</h2>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Calligrakrita-base.svg/800px-Calligrakrita-base.svg.png" height="100px" alt="Logo do Krita"> 
+        <p>O Krita é um poderoso editor de imagens e ilustrações digitais. Ele é amplamente utilizado por artistas para criar concept art, ilustrações, quadrinhos e até animações 2D. Totalmente gratuito e de código aberto, o Krita oferece ferramentas avançadas como pincéis personalizáveis, estabilização de traços e suporte a camadas.</p
+            > <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Krita_5.0.0_screenshot.png/1024px-Krita_5.0.0_screenshot.png" height="100px" alt="Logo do Krita">
+            <p>
+                <p><strong>Pincéis Personalizáveis:</strong> O Krita permite ajustar parâmetros como opacidade, textura e forma do pincel, criando ferramentas exclusivas para diferentes estilos artísticos.</p>
+                <p><strong>Estabilização de Traços:</strong> Para suavizar linhas e criar desenhos mais limpos, especialmente em ilustrações detalhadas ou ao desenhar à mão livre.</p>
+                <p><strong>Suporte a Camadas:</strong> Trabalhe em diferentes partes de uma ilustração sem afetar outras partes, essencial para ajustes finos e adição de detalhes.</p>
+                <p><strong>Animação 2D:</strong> O Krita também permite a criação de animações quadro a quadro, ideal para quem deseja adicionar movimento às suas obras.</p>
+                <p><strong>Suporte a Diversos Formatos de Arquivo:</strong> O software suporta formatos como PSD, PNG, JPEG, TIFF, e até GIF e WebM, garantindo compatibilidade com outros programas de edição.</p>
+            </p>
+            
+            <p>Além disso, o Krita possui uma interface intuitiva e customizável, ferramentas de edição avançadas e uma comunidade ativa, com muitos recursos educativos. Sendo de código aberto, o Krita é constantemente aprimorado e mantém-se sempre atualizado.</p>
+    </section>
+   
+    <section id="fnf" class="card">
+        <h2>Friday Night Funkin'</h2>
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Friday_Night_Funkin%27_logo.svg/1920px-Friday_Night_Funkin%27_logo.svg.png" height="250px" alt="Logo do Friday Night Funkin'">
+        <p>Friday Night Funkin é um jogo de ritmo open source que conquistou fãs ao redor do mundo. Nele, os jogadores precisam seguir o ritmo da música para vencer desafios e impressionar os personagens no universo do jogo. Com sua jogabilidade viciante e trilha sonora envolvente, FNF é perfeito para amantes de jogos musicais.</p>
+        <p>O jogo se destaca pela sua jogabilidade simples e desafiadora, onde o jogador precisa apertar as teclas correspondentes no ritmo da música para vencer os oponentes. A cada vitória, o jogador avança para novos desafios e músicas mais difíceis. O personagem principal, Boyfriend, se vê enfrentando diferentes personagens no cenário de um duelo musical, sendo sempre desafiado a tocar melhor para conquistar o coração da sua amada, Girlfriend.</p>
+
+    <p>Além disso, o visual do jogo também é um grande atrativo. A arte é inspirada em jogos retro de arcade, com personagens e cenários desenhados em pixel art, o que traz uma sensação nostálgica para os jogadores. O jogo também é famoso por sua comunidade ativa, com mods que adicionam novas músicas, personagens e até mesmo novas histórias, permitindo uma personalização infinita da experiência.</p>
+    </section>
+</body>
+</html>
