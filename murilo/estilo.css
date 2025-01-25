@@ -1,0 +1,106 @@
+﻿body { 
+    font-family: 'Arial', sans-serif; 
+    margin: 0;
+    padding: 0;
+    background-color: #121212; 
+    background-image: url('asasas.png'); 
+    background-size: cover;
+    background-position: center; 
+    background-repeat: no-repeat;
+    color: #f1f1f1; 
+    line-height: 1.6; /* Melhora a legibilidade do texto */
+}
+
+/* Estilos do menu de navegação */
+.menu {
+    background-color: #333;
+    padding: 10px 0;
+    text-align: center; /* Centraliza o menu */
+    position: sticky; /* Fixa o menu no topo */
+    top: 0;
+    z-index: 1000; /* Garante que o menu fique acima do conteúdo */
+}
+
+.menu a {
+    color: white;
+    padding: 14px 20px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px; /* Aumenta o tamanho da fonte */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Efeito suave */
+}
+
+.menu a:hover {
+    background-color: #ff5722; /* Cor vibrante de hover */
+    color: #fff;
+    border-radius: 5px; /* Adiciona borda arredondada ao hover */
+}
+
+/* Estilo do cabeçalho principal */
+h1 {
+    text-align: center;
+    font-size: 3em;
+    margin-top: 50px; /* Espaço superior */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Efeito de sombra no texto */
+    color: #ff5722; /* Cor vibrante */
+}
+
+/* Estilo para os parágrafos */
+p {
+    font-size: 18px;
+    margin: 20px auto;
+    width: 80%; /* Largura definida */
+    text-align: justify;
+    line-height: 1.8; /* Aumenta o espaçamento entre linhas */
+}
+
+/* Estilo da seção de imagens */
+div {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+img {
+    border-radius: 10px;
+    border: 5px solid #333;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6); /* Sombra nas imagens */
+}
+
+/* Estilo do vídeo */
+iframe {
+    display: block;
+    margin: 30px auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+}
+
+h2 {
+    text-align: center;
+    font-size: 2.5em;
+    color: #ff5722;
+    margin-top: 40px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+/* Estilo dos links */
+a {
+    color: #ff5722;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+/* Corrigindo o seletor com Open Sans */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap'); /* Importando a fonte corretamente */
+
+.open-sans {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400; /* Exemplo de peso da fonte */
+    font-style: normal;
+    font-optical-sizing: auto;
+}

@@ -1,0 +1,74 @@
+body {
+    font-family: system-ui, sans-serif;
+    margin: 0;
+    background-image: url(kitana2.png);
+    background-repeat: no-repeat;
+    background-position-x: right;
+    background-color: rgba(61, 127, 248, 0.342);
+
+
+}
+
+
+h1 {
+    color: rgb(10, 4, 100);
+}
+
+h2 {
+    color: rgb(10, 4, 100);
+}
+
+/* Estilo da barra de menu */
+.menu {
+    background-color: #005d97;
+}
+
+/* Estilo dos links no menu */
+.menu a {
+    color: rgb(255, 255, 255);
+    padding: 14px 20px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+/* Estilo ao passar o mouse sobre os links */
+.menu a:hover {
+    background-color: white;
+    color: rgb(10, 10, 10);
+}
+
+.conteudo {
+    position: relative;
+    /*border: darkgreen dashed 2px;*/
+
+    margin-top: 10px;
+    margin: 20px;
+
+}
+
+.container-texto {
+    /*border: red dashed 1px;*/
+    position: relative;
+    width: 60%;
+}
+
+.container-imagem {
+    /*border: blue  dashed 1px; */
+    position: absolute;
+    top: 0px;
+    width: 40%;
+    right: 0px;
+}
+
+@media only screen and (max-width: 550px) {
+
+    .container-texto {
+        width: 100%;
+    }
+
+    .container-imagem {
+        position: relative;
+        width: 100%;
+    }
+
+}

@@ -40,7 +40,7 @@ foreach ($data['item'] as $item) {
     echo "<h2><strong>Integrantes:</strong> " . implode(", ", $nomes) . "</h2>\n";
 
   // Definir os possíveis nomes de páginas principais
-$paginasPrincipais = ["index.html", "ppi.html", "home.html", "personagem.html", "indexppi.html"];
+$paginasPrincipais = ["index.html", "ppi.html",  "inicio.html", "pagina.html",   "inicial.html", "home.html", "personagem.html", "indexppi.html"];
 
 // Procurar por qualquer uma das páginas principais na pasta
 $paginaPrincipalEncontrada = null;

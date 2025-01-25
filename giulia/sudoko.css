@@ -1,0 +1,61 @@
+.conteudo {
+    margin: auto;
+    width: 90%;
+    margin-top: 10px;
+    margin:20px;
+}
+
+body {
+    font-family: system-ui,sans-serif ;
+    margin: 0;
+    background-image: url(sudoku.jpg);
+    background-repeat: no-repeat;
+    background-position: 1300px 150px;
+    background-color: rgba(66, 180, 0, 0.596);
+    background-size: 450px ;
+    
+
+}
+
+h1 {
+    color: rgb(23, 56, 4);
+}
+
+h2 {
+    color: rgb(41, 88, 25);
+    margin: 0;
+}
+
+.texto {
+    margin: 40px;
+    margin-left: -1px;
+}
+
+.title {
+    text-align: center;
+}
+
+
+h3 {
+    color: rgba(31, 30, 30, 0.699);
+}
+
+/* Estilo da barra de menu */
+.menu {
+    background-color: rgba(0, 114, 0, 0.699);
+}
+
+/* Estilo dos links no menu */
+.menu a {
+    color: white;
+
+    padding: 14px 20px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+/* Estilo ao passar o mouse sobre os links */
+.menu a:hover {
+    background-color: whitesmoke;
+    color: black;
+}

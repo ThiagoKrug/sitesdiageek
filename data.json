@@ -10,7 +10,6 @@
             "pasta": "joao_gabriel",
             "nomes": [
                 "João Gabriel"
-   
             ]
         },
         {
@@ -25,7 +24,6 @@
             "pasta": "manuela",
             "nomes": [
                 "Manuela"
-           
             ]
         },
         {
@@ -51,6 +49,52 @@
                 "Yuri Pavão",
                 "Daniel",
                 "João Trindade"
+            ]
+        },
+        {
+            "pasta": "ana_raquel",
+            "nomes": [
+                "Ana Raquel",
+                "Murilo",
+                "Julia"
+            ]
+        },
+        {
+            "pasta": "angelo",
+            "nomes": [
+                "Angelo",
+                "Yuri"
+            ]
+        },
+        {
+            "pasta": "giulia",
+            "nomes": [
+                "Camila Gonçalves",
+                "Carolini Sigal",
+                "Giulia Moccelin"
+            ]
+        },
+        {
+            "pasta": "murilo",
+            "nomes": [
+                "Antonio Barreto",
+                "Murilo Garcia",
+                "Miguel Thevenet"
+            ]
+        },
+        {
+            "pasta": "angelo",
+            "nomes": [
+                "Ângelo",
+                "Yuri"
+            ]
+        },
+        {
+            "pasta": "giovana",
+            "nomes": [
+                "Giovana",
+                "Julia Almeida",
+                "Lóren"
             ]
         }
     ]
